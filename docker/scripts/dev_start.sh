@@ -107,11 +107,11 @@ DEFAULT_MAPS=(
   san_mateo
 )
 CUSTOM_MAPS=(
-  auroai/map_apollo_carla_town01
-  auroai/map_apollo_carla_town02
-  auroai/map_apollo_carla_town03
-  auroai/map_apollo_carla_town04
-  auroai/map_apollo_carla_town05
+  auroai/map_apollo_carla_town01:0.9.6
+  auroai/map_apollo_carla_town02:0.9.6
+  auroai/map_apollo_carla_town03:0.9.6
+  auroai/map_apollo_carla_town04:0.9.6
+  auroai/map_apollo_carla_town05:0.9.6
 )
 DEFAULT_TEST_MAPS=(
   sunnyvale_big_loop
