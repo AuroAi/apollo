@@ -1,0 +1,16 @@
+# proj: +proj=utm +zone=50 +ellps=WGS84
+# scale:1.11177
+# (XXX) Manually adjusted
+header:
+  frame_id: novatel
+transform:
+  translation:
+    x: 0
+    y: 0
+    z: 2
+  rotation:
+    x: 0
+    y: 0
+    z: 0
+    w: 1
+child_frame_id: velodyne128

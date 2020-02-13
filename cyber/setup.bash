@@ -20,7 +20,7 @@ export PATH=${binary_path}:${recorder_path}:${monitor_path}:${launch_path}:${cha
 export PYTHONPATH=${PYTHON_LD_PATH}:${CYBER_PATH}/python:$PYTHONPATH
 
 export CYBER_DOMAIN_ID=80
-export CYBER_IP=127.0.0.1
+export CYBER_IP=172.17.0.1
 
 export GLOG_log_dir=/apollo/data/log
 export GLOG_alsologtostderr=0

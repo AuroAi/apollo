@@ -88,7 +88,9 @@ void PointsFromCurve(const Curve &input_curve, std::vector<Vec2d> *points) {
       AERROR << "Can not handle curve type.";
     }
   }
-  RemoveDuplicates(points);
+  // comment this out so Carla (Roadrunner) maps work
+  // better solution is to remove 'tiny' segments without breaking road graph
+  // RemoveDuplicates(points);
 }
 
 apollo::common::math::Polygon2d ConvertToPolygon2d(const Polygon &polygon) {

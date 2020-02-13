@@ -106,6 +106,13 @@ DEFAULT_MAPS=(
   sunnyvale_with_two_offices
   san_mateo
 )
+CUSTOM_MAPS=(
+  auroai/map_apollo_carla_town01:0.9.6
+  auroai/map_apollo_carla_town02:0.9.6
+  auroai/map_apollo_carla_town03:0.9.6
+  auroai/map_apollo_carla_town04:0.9.6
+  auroai/map_apollo_carla_town05:0.9.6
+)
 DEFAULT_TEST_MAPS=(
   sunnyvale_big_loop
   sunnyvale_loop
@@ -239,6 +246,10 @@ function main(){
             # Included default maps.
             for map_name in ${DEFAULT_MAPS[@]}; do
               source ${APOLLO_ROOT_DIR}/docker/scripts/restart_map_volume.sh ${map_name} "${VOLUME_VERSION}"
+            done
+            # Include custom maps
+            for map_name in ${CUSTOM_MAPS[@]}; do
+                source ${APOLLO_ROOT_DIR}/docker/scripts/restart_custom_map_volume.sh ${map_name}
             done
             YOLO3D_VOLUME=apollo_yolo3d_volume_$USER
             docker stop ${YOLO3D_VOLUME} > /dev/null 2>&1
